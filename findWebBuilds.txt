@@ -1,0 +1,18 @@
+import requests
+
+fileNames = open("fileNames.txt", "r")
+webBuildURLs = open("webBuildURLs.txt", "w")
+
+for a in fileNames:
+    csv = open("CSVs/" + a, "r")
+    
+    for b in csv:
+        url = b.split(",")
+        
+        if("game_url" == url):
+            continue
+        
+        html = requests.get(url).text
+        
+        if("/index.html" in html):
+            webBuildURLs.write(url + "\n")
