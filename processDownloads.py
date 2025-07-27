@@ -134,9 +134,9 @@ for a in inFile:
             fileName = fileName.replace("..", ".")
     
         if(0 < len(fileName)):
-            if(1 == b and inputs[9] == inputs[10]):
-                gameBuilds = buildHTML.replace("fileName", fileName).replace("buildType", "Mac and Windows Version")
-                continue
+            #if(1 == b and inputs[9] == inputs[10]):
+                #gameBuilds = buildHTML.replace("fileName", fileName).replace("buildType", "Mac and Windows Version")
+                #continue
             
             #if(4 == b):
                 #fileName = game + "-web.zip"
